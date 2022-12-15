@@ -1,5 +1,7 @@
 // Controlador de Medicos
 
+const models = require('../database/models/index');
+
 module.exports = {
 
     crear: async (req, res) => {

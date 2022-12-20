@@ -36,5 +36,6 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 sequelize.sync()
+//sequelize.sync({force:true}) //Borra base de datos
 
 module.exports = db;

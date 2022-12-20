@@ -6,6 +6,7 @@ const pacientesRoutes = require("./pacientes.routes")
 const medicosRoutes = require("./medicos.routes")
 const tratamientosRoutes = require("./tratamientos.routes")
 const usuariosRoutes = require("./usuarios.routes")
+const authRoutes = require("./auth.routes")
 
 const rutas_init = () => {
     const router = Router()
@@ -22,4 +23,12 @@ const rutas_init = () => {
 
 }
 
-module.exports = { rutas_init }
+const rutas_auth = () => {
+    const router = Router()
+
+    router.use("/auth", authRoutes)
+
+    return router
+}
+
+module.exports = { rutas_init, rutas_auth }

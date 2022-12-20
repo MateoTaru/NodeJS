@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
     },
-    especialidad: {
+    espesialidad: {
       type: DataTypes.STRING,
     },
     tiempo_trabajando:{

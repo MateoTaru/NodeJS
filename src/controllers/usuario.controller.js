@@ -1,4 +1,4 @@
-// Controlador de Tratamientos
+// Controlador de Usuarios
 
 const models = require('../database/models/index');
 

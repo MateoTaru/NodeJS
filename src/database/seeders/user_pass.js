@@ -10,12 +10,12 @@ module.exports = {
         return Promise.all([
             models.usuario.findOrCreate({
                 where: {
-                    id: "2"
+                    id: "1"
                 },
                 defaults: {
-                    nombre: "node",
-                    apellido: "JS",
-                    email: "node@email.com",
+                    nombre: "mateo",
+                    apellido: "Taruschio",
+                    email: "mateo@email.com",
                     edad: 25,
                     password: bcrypt.hashSync('password', 10)
                 }

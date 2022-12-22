@@ -24,7 +24,7 @@ module.exports = {
             }
 
 
-            // 3. Si todo está bien, devuelvo el token
+            // Si todo está bien, devuelvo el token
             res.json({
                 success: true,
                 data: {
@@ -50,7 +50,8 @@ module.exports = {
             res.json({
                 success: true,
                 data: {
-                    id: user.id
+                    id: user.id,
+                    token: user.token
                 }
             })
 

@@ -7,6 +7,7 @@ const medicosRoutes = require("./medicos.routes")
 const tratamientosRoutes = require("./tratamientos.routes")
 const usuariosRoutes = require("./usuarios.routes")
 const authRoutes = require("./auth.routes")
+const decodeJWT = require("../middlewares/decodeJWT")
 
 const rutas_init = () => {
     const router = Router()
@@ -17,7 +18,7 @@ const rutas_init = () => {
 
     router.use("/tratamientos", tratamientosRoutes)
 
-    router.use("/usuarios", usuariosRoutes)
+    router.use("/usuarios", decodeJWT, usuariosRoutes)
 
     return router
 

@@ -4,6 +4,9 @@ const express = require('express')
 const globalConstants = require('./const/globalConstants')
 const routerConfig = require('./routes/index.routes')
 
+let errorHandler = require('./middlewares/error')
+let createError = require('http-errors')
+
 const configuracionApi = (app) => {
     app.use(express.json())
     app.use(express.urlencoded({extended: true}))

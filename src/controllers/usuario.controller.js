@@ -28,6 +28,7 @@ module.exports = {
             success: true,
             data: {
                 usuarios: users
+                
             }
         })
 
@@ -38,7 +39,7 @@ module.exports = {
         const user = await models.usuario.findOne({
             where: {
                 id:req.params.idUsuario
-            }
+            },attributes:{exclude:["password"]}
         })
 
         res.json({
